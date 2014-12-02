@@ -22,7 +22,9 @@ public class FractionTest {
     @Test
     public void testValue() {
         Fraction n = new Fraction(4,3);
-        assertEquals(1.33333,n.getValue(),0.01);
+        assertEquals(1.33333,new Fraction(4,3).getValue(),0.01);
+        assertEquals(0.5,new Fraction(1,2).getValue(),0.01);
+        assertEquals(0.875,new Fraction(7,8).getValue(),0.01);
     }
     
     @Test
@@ -81,5 +83,11 @@ public class FractionTest {
         Fraction f2 = new Fraction(8,4);
         
         assertFalse(new Fraction(12,9).equals(f1.add(f2)));
+    }
+    
+    @Test
+    public void testOuput() {
+        Fraction f1 = new Fraction(6,7);
+        assertEquals("67",f1.toString());
     }
 }

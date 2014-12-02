@@ -91,4 +91,10 @@ public class Fraction {
                 (this.denominator == ((Fraction) o).denominator);
     }
 
+    
+    @Override
+    public String toString() {
+        return this.numerator + "/" + this.denominator;
+    }
+
 }
